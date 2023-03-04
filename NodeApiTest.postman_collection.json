@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "8b9e519f-84d8-4831-ab40-119cb149d47d",
+		"name": "NodeApiTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19357709"
+	},
+	"item": [
+		{
+			"name": "Lấy danh sách đánh giá theo khách hàng",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rateRes/getRateResByUser/:id",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rateRes",
+						"getRateResByUser",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách like theo khách hàng",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/likeRes/getLikeResByUser/:id",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"likeRes",
+						"getLikeResByUser",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách like theo nhà hàng",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/likeRes/getLikeResByRestaurant/:id",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"likeRes",
+						"getLikeResByRestaurant",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách đánh giá theo nhà hàng",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/rateRes/getRateResByRestaurant/:id",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rateRes",
+						"getRateResByRestaurant",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tạo đánh giá nhà hàng",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"\", \r\n    \"res_id\": \"\", \r\n    \"amount\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/rateRes/rateRes",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"rateRes",
+						"rateRes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like nhà hàng",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"\",\r\n    \"res_id\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/likeRes/likeRes/:like",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"likeRes",
+						"likeRes",
+						":like"
+					],
+					"variable": [
+						{
+							"key": "like",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Đặt hàng",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"\", \r\n    \"food_id\": \"\", \r\n    \"amount\": \"\", \r\n    \"code\": \"\", \r\n    \"arr_sub_id\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/order/order/",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"order",
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
